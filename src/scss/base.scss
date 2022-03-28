@@ -1,0 +1,109 @@
+@import "variables";
+@import "mixins";
+@import "topbar";
+@import "hero";
+@import "brands";
+@import "all-in-one";
+@import "full-height";
+@import "bestsellers";
+@import "half-content";
+@import "reservation";
+@import "prefooter";
+@import "footer";
+
+::selection {
+  background-color: $fourth-color;
+  color: $first-color;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  font-family: "Inter", sans-serif;
+  background-color: $first-color;
+  overflow-x: hidden;
+}
+
+// TITLE
+
+.title {
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 3em 0;
+  text-align: center;
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h4 {
+    font-size: 2em;
+    text-align: left;
+  }
+
+  p {
+    margin-top: 2em;
+  }
+}
+
+// 1/3 SECTIONS
+
+.sections {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section {
+  text-align: center;
+  width: 30%;
+  padding: 0 1em;
+
+  @media only screen and (min-width: 890px) {
+    &:not(:last-of-type) {
+      border-right: 1px solid #8080801c;
+    }
+  }
+
+  h3 {
+    margin: 0.5em 0;
+  }
+}
+
+// STYLING IMAGES AND ICONS
+
+.img-icon {
+  max-width: 4em;
+  height: auto;
+  margin: 0.5em auto;
+}
+
+.img-bs {
+  max-width: 80%;
+}
+
+img:not(.img-icon, .hero-img):hover,
+img:not(.img-icon, .hero-img):focus {
+  opacity: 0.95;
+}
+
+.invisible {
+  visibility: hidden;
+}

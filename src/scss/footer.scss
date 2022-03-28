@@ -1,0 +1,19 @@
+footer {
+    width: 100%;
+    padding: 1em 0;
+    background-color: $fourth-color;
+    text-align: center;
+
+    p {
+        margin: .5em 0 1em 0;
+        color: $first-color;
+    }
+}
+
+.logo-footer {
+    margin: 0 auto;
+
+    img {
+        max-width: 2.5em;
+    }
+}

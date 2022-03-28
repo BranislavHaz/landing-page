@@ -1,0 +1,66 @@
+.full-height {
+    background-color: $third-color;
+    color: $first-color;
+
+    .separate {
+        justify-content: space-around;
+    }
+
+    .half-content {
+        margin-bottom: 0;
+    }
+}
+
+.half-text {
+    @media only screen and (max-width: 890px) {
+        width: 90%;
+        padding-bottom: .4em;
+    }
+
+    .title {
+        @media only screen and (max-width: 890px) {
+            max-width: 90%;
+            padding-bottom: .4em;
+        }
+    }
+}
+
+.benefits {
+    display: flex;
+    width: 100%;
+
+    @media only screen and (max-width: 890px) {
+        justify-content: center;
+    }
+
+    @media only screen and (max-width: 490px) {
+        flex-direction: column;
+    }
+}
+
+.benefits-col {
+    display: block;
+}
+
+.benefits-el {
+    display: flex;
+    align-items: center;
+}
+
+.fw-text {
+    text-align: left;
+}
+
+.fw-icon .img-icon {
+    width: 2.5em;
+    margin: 1em .5em 1em 1.5em;
+}
+
+.btn-reserve {
+
+    margin-top: 2em;
+
+    a {
+        @include button(light);
+    }
+}

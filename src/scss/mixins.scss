@@ -1,0 +1,44 @@
+@mixin button($color) {
+    padding: .7em;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+    font-weight: 500;
+
+    @if $color == "light" {
+        background-color: $first-color;
+        color: $fourth-color;
+
+        &:hover,
+        &:focus {
+            background-color: darken($first-color, 4%);
+        }
+    }
+
+    @else if $color == "average" {
+        background-color: $third-color;
+        color: $first-color;
+
+        &:hover,
+        &:focus {
+            background-color: lighten($third-color, 4%);
+        }
+    }
+
+    @else if $color == "dark" {
+        background-color: $fourth-color;
+        color: $first-color;
+
+        &:hover,
+        &:focus {
+            background-color: lighten($fourth-color, 4%);
+        }
+    }
+
+    svg {
+        position: relative;
+        top: .4em;
+        max-width: 1.1em;
+    }
+
+}

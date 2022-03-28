@@ -1,0 +1,82 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+        //TOTOTO
+        @media only screen and (max-width: 890px) {
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+}
+
+.hero-content {
+    width: 60%;
+    padding-top: 20vh;
+
+    @media only screen and (max-width: 890px) {
+        width: 95%;
+        padding-bottom: 3em;
+    }
+
+    .hero-box {
+        max-width: 65%;
+        margin: 0 auto;
+
+        @media only screen and (max-width: 890px) {
+            max-width: 90%;
+            text-align: center;
+        }
+    }
+
+    h1 {
+        font-size: 4em;
+    }
+
+    p {
+        margin-top: 2em;
+    }
+
+    .btn-info {
+        margin-top: 2em;
+
+        @media only screen and (max-width: 890px) {
+            text-align: center;
+        }
+
+        a {
+            @include button(dark);
+        }
+    }
+}
+
+.hero-image {
+    width: 40%;
+    padding-top: 20vh;
+    background-color: $fourth-color;
+
+    //TOTOTO
+    @media only screen and (max-width: 890px) {
+        //display: none;
+        display: block;
+        background-color: $first-color;
+        padding: 0;
+    }
+
+    img {
+        position: relative;
+        bottom: -5em;
+        left: -15em;
+        max-width: 960px;
+        height: auto;
+
+        //TOTOTO
+        @media only screen and (max-width: 890px) {
+            bottom: -2em;
+            max-width: 530px;
+            left: -5em;
+            bottom: 2em;
+    }
+    }
+}

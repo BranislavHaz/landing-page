@@ -1,0 +1,85 @@
+@import 'mixins';
+
+.topbar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3em;
+    border-color: none;
+    font-weight: 500;
+    font-size: 1rem;
+    color: $dark-text;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media only screen and (max-width: 890px) {
+        margin: 0 auto;
+    }
+}
+
+.logo {
+    img {
+        max-height: 1.5em;
+    }
+}
+
+.menu {
+    align-self: center;
+
+    li {
+        display: inline-block;
+        margin-left: 1.6em;
+        list-style-type: none;
+    }
+
+    a {
+        color: $dark-text;
+        text-decoration: none;
+        border-bottom: none;
+        transition: border-bottom 0.2s ease-in-out;
+    }
+
+    a:hover,
+    a:focus {
+        color: lighten($dark-text, 25%);
+    }
+
+    @media only screen and (max-width: 1230px) {
+        display: none;
+    }
+}
+
+.contact {
+    justify-self: end;
+    align-self: center;
+    display: inline-block;
+
+    .btn-phone {
+        float: left;
+        margin-right: 1em;
+        
+        a {
+            @include button(light);
+        }
+    }
+
+    .btn-mail {
+        float: right;
+        
+        a {
+            @include button(average);
+        }
+    }
+
+    @media only screen and (max-width: 1150px) {
+        display: none;
+    }
+}

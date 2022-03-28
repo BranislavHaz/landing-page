@@ -1,0 +1,15 @@
+.all-in-one {
+    .sections {
+        @media only screen and (max-width: 890px) {
+            flex-direction: column;
+        }
+    }
+
+    .section {
+        @media only screen and (max-width: 890px) {
+            width: 90%;
+            padding-bottom: 2em;
+        }
+    }
+
+}

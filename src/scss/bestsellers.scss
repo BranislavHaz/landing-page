@@ -1,0 +1,33 @@
+.bestsellers {
+  .title {
+    @media only screen and (max-width: 890px) {
+      max-width: 95%;
+      padding: 1.5em 0;
+    }
+  }
+
+  .sections {
+    @media only screen and (max-width: 890px) {
+      flex-direction: column;
+    }
+  }
+
+  .section {
+    @media only screen and (max-width: 890px) {
+      width: 90%;
+    }
+
+    img {
+      @media only screen and (max-width: 890px) {
+        margin: 2em 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .img-bs {
+    @media only screen and (max-width: 890px) {
+      margin: 2em 0;
+    }
+  }
+}
